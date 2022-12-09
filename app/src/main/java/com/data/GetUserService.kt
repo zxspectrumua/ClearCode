@@ -18,5 +18,5 @@ object RetrofitServices {
 
 interface ActivityApi {
     @GET("/api/activity")
-    suspend fun getActivity(): ActivityDataClass
+    suspend fun getActivity(): UsefulActivityDto
 }

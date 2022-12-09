@@ -1,7 +1,10 @@
 package com.presentation
 
+import com.domain.GetUsefulActivityUseCase
+import com.entity.UsefulActivity
+
 sealed class State {
-    object Success:State()
+    data class Success(var useCaseActivity:UsefulActivity):State()
     object Loading:State()
     data class Error(var message:String):State()
 }
